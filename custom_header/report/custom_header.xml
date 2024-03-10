@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <template id="custom_header">
+            <div class="header mb8" style="margin-top:0 px">
+                <div class="row col-12 mb8" style="border-bottom:2px solid;padding:0 10px;font-size: 16px">
+                    <div class="text-center col-4 ">
+                        <img t-if="user.company_id.logo" t-att-src="image_data_uri(user.company_id.logo)"
+                             style="max-height: 90px;margin-top: 15px"
+                             alt="Logo"/>
+                    </div>
+                    <div class="col-1"/>
+                    <div class="text-end col-6  mb8" style="font-size:14px;padding-top:20px">
+                        <h2>My Header</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-out="0"/>
+            </div>
+            <div t-attf-class="footer o_standard_footer ">
+                <div class="container" style="border-top:2px solid;padding:10px">
+                   <h2 align="center">My footer</h2>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>
